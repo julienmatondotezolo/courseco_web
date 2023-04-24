@@ -1,0 +1,18 @@
+{
+  "ROUTE": {
+    "HOME": "/",
+    "SCENARIO": "/scenario"
+  },
+  "EXTERNAL": {
+    "DOC": {
+      "LIQUID": "https://shopify.github.io/liquid/"
+    }
+  },
+  "NOTIFICATION": {
+    "DELAY": "5000"
+  },
+  "BOTHIVE": {
+    "SALES_PAGE": "https://bothive.be",
+    "APP": "https://bothive.app"
+  }
+}

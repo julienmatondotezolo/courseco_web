@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 8123",
+    "dev": "NODE_OPTIONS='--inspect' next dev -p 8123",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -15,11 +15,19 @@
     "autoprefixer": "10.4.14",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
-    "next": "13.3.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-simple-import-sort": "7.0.0",
+    "next": "^13.3.1",
     "postcss": "8.4.22",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "tailwindcss": "3.3.1",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.7"
   }
 }
