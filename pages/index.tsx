@@ -1,8 +1,15 @@
+import type { GetStaticProps } from "next";
 import Head from "next/head";
 
-import { Products } from "../src/components/";
+import { Products } from "@/components/";
+import { Product } from "@/types";
+import { fetchProduct } from "@/utils";
 
-export default function Home() {
+type Props = {
+  products: Product[];
+};
+
+export default function Home({ products }: Props) {
   return (
     <>
       <Head>
@@ -12,8 +19,19 @@ export default function Home() {
       </Head>
       <main>
         <h1>Hello world...</h1>
-        <Products />
+        <Products products={products} />
       </main>
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const products: Product[] = await fetchProduct();
+
+  return {
+    props: {
+      products,
+    },
+    // revalidate: 10,
+  };
+};

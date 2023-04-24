@@ -7,5 +7,6 @@ export default {
   root,
   products: {
     all: `${root.url}/courseco_products`,
+    search: `${root.url}/courseco_search`,
   },
 };
