@@ -1,4 +1,4 @@
-import type { GetStaticProps } from "next";
+import type { GetServerSideProps } from "next";
 import Head from "next/head";
 
 import { Products } from "@/components/";
@@ -25,7 +25,7 @@ export default function Home({ products }: Props) {
   );
 }
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const products: Product[] = await fetchProduct();
 
   return {
