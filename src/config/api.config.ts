@@ -9,7 +9,4 @@ export default {
     all: `${root.url}/courseco_products`,
     search: `${root.url}/courseco_search`,
   },
-  images: {
-    hero: "../src/assets/images/fruits.png",
-  },
 };
