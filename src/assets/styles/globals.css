@@ -1,0 +1,42 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --primary-color: #33a8ff;
+  --primary-color-light: #6dc1ff;
+  --secondary-color: #ffad33;
+  --secondary-color-light: #ffcd6d;
+  --blue-opaque: #e8f3fd;
+  --orange-opaque: #fdf5e8;
+  --red-opaque: #fdece8;
+  --primary-color-dark: #4c667a;
+  --light-grey: #e4e4e4;
+  --dark-grey: #3b3b3b;
+  --green-notification: #6bd22c;
+  --red-notification: #d22c2c;
+  --text-small: 12px;
+  --text-normal: 16px;
+  --text-large: 24px;
+  --text-superlarge: 36px;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth text-primary-color-dark;
+  }
+}
+
+@layer components {
+  .primaryButton {
+    @apply bg-primary-color text-white py-3 px-5 rounded-lg font-bold text-base;
+  }
+
+  .filterButton {
+    @apply bg-light-grey py-3 px-5 rounded-lg font-normal text-base;
+  }
+
+  /* .promoNotification {
+    @apply bg-primary-color py-3 px-5 rounded-md font-bold text-md;
+  } */
+}
