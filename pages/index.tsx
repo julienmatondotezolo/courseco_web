@@ -17,9 +17,10 @@ export default function Home({ products }: Props) {
         <meta name="description" content="Economisez sur vos courses avec Courseco." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <h1>Hello world...</h1>
-        <Hero username="Julien" />
+      <h1>Hello world...</h1>
+      <header></header>
+      <Hero username="Julien" />
+      <main className="flex mx-auto w-11/12 md:max-w-screen-xl">
         <Products products={products} />
       </main>
     </>

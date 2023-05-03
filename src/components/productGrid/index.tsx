@@ -27,12 +27,12 @@ export function ProductGrid({ products }: Props) {
             </figure>
             <article>
               <p className="text-xs">{product.store}</p>
-              <h3 className="text-base font-medium">{product.name}</h3>
+              <h3 className="text-sm font-medium">{product.name}</h3>
             </article>
             {product.discountedPriceFormatted ? (
-              <p className="text-xl font-bold">{product.discountedPriceFormatted}</p>
+              <p className="text-lg font-bold">{product.discountedPriceFormatted}</p>
             ) : (
-              <p className="text-xl font-bold">{product.price}</p>
+              <p className="text-lg font-bold">{product.price}</p>
             )}
           </section>
         </div>

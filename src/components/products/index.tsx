@@ -12,7 +12,7 @@ type Props = {
 export function Products({ products }: Props) {
   return (
     <div className="w-full">
-      <section className="flex flex-wrap justify-between items-end w-[100%] py-4 border-b">
+      <section className="flex flex-wrap justify-between items-end w-[100%] py-8 border-b">
         <article className="sm:w-full md:w-1/2">
           <h2 className="text-2xl font-medium">Offres spéciales</h2>
           <p>{products.length} produits</p>

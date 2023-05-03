@@ -1,6 +1,5 @@
 const root = {
-  // url: `${process.env.COURSECO_URL}/assets/` || "@/assets/",
-  url: "/Users/ByGoldY 1/projects/courseco_web/src/assets",
+  url: "https://courseco.s3.eu-west-3.amazonaws.com/assets/",
 };
 
 // eslint-disable-next-line import/no-anonymous-default-export
