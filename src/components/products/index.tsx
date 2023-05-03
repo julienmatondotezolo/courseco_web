@@ -1,7 +1,9 @@
-import Image from "next/image";
 import React from "react";
 
 import { Product } from "@/types";
+
+import { Filters } from "../filters";
+import { ProductGrid } from "../productGrid";
 
 type Props = {
   products: Product[];
@@ -9,34 +11,31 @@ type Props = {
 
 export function Products({ products }: Props) {
   return (
-    <div className="grid sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-x-2 md:gap-x-5 gap-y-10 overflow-hidden">
-      {products.map((product) => (
-        <div className="relative flex flex-wrap rounded-xl w-[100%] border" key={product.id}>
-          {product.promotion ? (
-            <p className="absolute rounded-tl-xl rounded-r-lg px-3 py-2 text-xs text-white bg-red-notification">
-              {product.promotion}
-            </p>
-          ) : (
-            ""
-          )}
-          <button className="absolute bottom-0 right-0 primaryButton rounded-bl-none rounded-tr-none">+</button>
-
-          <section className="flex flex-col flex-1 justify-between p-5">
-            <figure className="flex justify-center w-[100%] p-5 object-contain">
-              <Image src={product.images} alt={product.name} width={100} height={100} />
-            </figure>
-            <article>
-              <p className="text-xs">{product.store}</p>
-              <h3 className="text-base font-medium">{product.name}</h3>
-            </article>
-            {product.discountedPriceFormatted ? (
-              <p className="text-xl font-bold">{product.discountedPriceFormatted}</p>
-            ) : (
-              <p className="text-xl font-bold">{product.price}</p>
-            )}
-          </section>
+    <div className="w-full">
+      <section className="flex flex-wrap justify-between items-end w-[100%] py-4 border-b">
+        <article className="sm:w-full md:w-1/2">
+          <h2 className="text-2xl font-medium">Offres spéciales</h2>
+          <p>{products.length} produits</p>
+        </article>
+        <div className="flex items-center">
+          <p className="mr-4">Trier par:</p>
+          <select className="filterButton">
+            <option value="relevance">Relevance</option>
+            <option value="name-asc">Nom (A-Z)</option>
+            <option value="name-desc">Nom (Z-A)</option>
+            <option value="price-asc">Prix (0-9)</option>
+            <option value="price-desc">Prix (9-0)</option>
+          </select>
         </div>
-      ))}
+      </section>
+      <div className="flex flex-wrap w-[100%] py-12">
+        <div className="sm:w-full md:w-3/12">
+          <Filters />
+        </div>
+        <div className="sm:w-full md:w-9/12">
+          <ProductGrid products={products} />
+        </div>
+      </div>
     </div>
   );
 }
