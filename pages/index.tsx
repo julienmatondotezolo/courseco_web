@@ -1,7 +1,7 @@
 import type { GetServerSideProps } from "next";
 import Head from "next/head";
 
-import { Products } from "@/components/";
+import { Hero, Products } from "@/components/";
 import { Product } from "@/types";
 import { fetchProduct } from "@/utils";
 
@@ -19,6 +19,7 @@ export default function Home({ products }: Props) {
       </Head>
       <main>
         <h1>Hello world...</h1>
+        <Hero username="Julien" />
         <Products products={products} />
       </main>
     </>
