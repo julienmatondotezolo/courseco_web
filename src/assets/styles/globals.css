@@ -32,6 +32,10 @@
     @apply bg-primary-color text-white py-3 px-5 rounded-lg font-bold text-base;
   }
 
+  .filterButton {
+    @apply bg-light-grey py-3 px-5 rounded-lg font-normal text-base;
+  }
+
   /* .promoNotification {
     @apply bg-primary-color py-3 px-5 rounded-md font-bold text-md;
   } */
