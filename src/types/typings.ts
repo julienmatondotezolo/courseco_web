@@ -9,3 +9,12 @@ export interface Product {
   name: string;
   store: string;
 }
+
+export interface Store {
+  name: string;
+  street: string;
+  city: string;
+  logostore: string;
+  distance: string;
+  store: string;
+}

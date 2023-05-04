@@ -2,6 +2,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@font-face {
+  font-family: "SFPro";
+  src: url("/fonts/SFPro.ttf");
+}
+
 :root {
   --primary-color: #33a8ff;
   --primary-color-light: #6dc1ff;

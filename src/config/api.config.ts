@@ -9,4 +9,7 @@ export default {
     all: `${root.url}/courseco_products`,
     search: `${root.url}/courseco_search`,
   },
+  store: {
+    nearby: `${root.url}/courseco_nearby`,
+  },
 };
