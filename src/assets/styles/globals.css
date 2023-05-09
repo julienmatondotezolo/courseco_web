@@ -41,6 +41,10 @@
     @apply bg-light-grey py-3 px-5 rounded-lg font-normal text-sm;
   }
 
+  .roundedButton {
+    @apply bg-dark-grey py-1 px-3 rounded-3xl text-white;
+  }
+
   /* .promoNotification {
     @apply bg-primary-color py-3 px-5 rounded-md font-bold text-md;
   } */

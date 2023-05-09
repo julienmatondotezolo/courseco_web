@@ -1,15 +1,7 @@
-// import type { GetServerSideProps } from "next";
 import Head from "next/head";
 
 import { Navigation, StoresFinder } from "@/components/";
-// import { Store } from "@/types";
-// import { fetchStores } from "@/utils";
 
-// type Props = {
-//   stores: Store[];
-// };
-
-// export default function Stores({ stores }: Props) {
 export default function Stores() {
   return (
     <>
@@ -35,14 +27,3 @@ export default function Stores() {
     </>
   );
 }
-
-// export const getServerSideProps: GetServerSideProps<Props> = async () => {
-//   const stores: Store[] = await fetchStores();
-
-//   return {
-//     props: {
-//       stores,
-//     },
-//     // revalidate: 10,
-//   };
-// };

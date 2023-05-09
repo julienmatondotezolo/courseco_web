@@ -1,5 +1,5 @@
 const root = {
-  url: process.env.COURSECO_API || "http://localhost:1337",
+  url: process.env.COURSECO_API || "https://xc6lwruhnf.execute-api.eu-west-3.amazonaws.com/dev",
 };
 
 // eslint-disable-next-line import/no-anonymous-default-export
