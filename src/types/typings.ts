@@ -11,10 +11,18 @@ export interface Product {
 }
 
 export interface Store {
-  name: string;
-  street: string;
-  city: string;
-  logostore: string;
-  distance: string;
-  store: string;
+  coordinates: [number, number];
+  type: string;
+  properties: {
+    address: {
+      street: string;
+      cityName: string;
+      zipCode: string;
+    };
+    commercialName: string;
+    distance: number;
+    groceryName: string;
+    logoStore: string;
+    placeId: number;
+  };
 }

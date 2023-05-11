@@ -19,15 +19,18 @@ export function StoreList({ stores }: Props) {
                 <figure className="flex items-center w-4 md:w-8 mr-4">
                   <Image
                     className="object-contain"
-                    src={imagesConfig.root.url + "images/" + store.name}
+                    src={imagesConfig.root.url + "images/" + store.properties.logoStore}
                     alt="Hero image"
                     width={100}
                     height={100}
                   />
                 </figure>
                 <div>
-                  <h3 className="font-medium">{store.name}</h3>
-                  <p className="float-left">{store.city}</p>
+                  <h3 className="font-medium">{store.properties.commercialName}</h3>
+                  <p className="float-left">
+                    {store.properties.address.street}, {store.properties.address.cityName}{" "}
+                    {store.properties.address.zipCode}
+                  </p>
                 </div>
               </article>
               <div className="hidden md:flex flex-wrap flex-row items-center">
@@ -36,7 +39,7 @@ export function StoreList({ stores }: Props) {
               </div>
               <article>
                 <p className="font-medium">Distance</p>
-                <p>{store.distance}</p>
+                <p>{store.properties.distance}</p>
               </article>
             </li>
           ))}
