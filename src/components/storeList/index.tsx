@@ -20,7 +20,7 @@ export function StoreList({ stores }: Props) {
         />
         <button className="primaryButton ml-4">Recherche</button>
       </div>
-      <section className="w-full md:h-96 md:overflow-y-scroll">
+      <section className="w-full md:h-[22rem] md:overflow-y-scroll">
         <ul>
           {stores.map((store) => (
             <li
