@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 
 import { Store } from "@/types";
-import { formatDistance, formatStringLength } from "@/utils";
+import { formatDistance } from "@/utils";
 
 type Props = {
   stores: Store[];
