@@ -10,8 +10,17 @@ type Props = {
 
 export function StoreList({ stores }: Props) {
   return (
-    <div className="bg-white top-1/2 w-full md:w-1/2 rounded-xl">
-      <section className="w-full overflow-hidden">
+    <div className="bg-white top-1/2 w-full md:w-1/2 rounded-xl overflow-hidden">
+      <div className="flex justify-between w-full p-4 bg-light-grey">
+        <input
+          className="searchInput md:w-80 flex-grow"
+          type="search"
+          name="search"
+          placeholder="Chercher des magasins..."
+        />
+        <button className="primaryButton ml-4">Recherche</button>
+      </div>
+      <section className="w-full md:h-96 md:overflow-y-scroll">
         <ul>
           {stores.map((store) => (
             <li
