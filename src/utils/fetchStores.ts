@@ -5,10 +5,7 @@ export const fetchStores = async (position: { lat: any; long: any }) => {
   const courseco_url = apiConfig.store.nearby;
   const { lat, long } = position;
 
-  // const url = `${courseco_url}?latitude=${lat}&longitude=${long}`;
-  const url = courseco_url;
-
-  console.log("url:", url);
+  const url = `${courseco_url}?latitude=${lat}&longitude=${long}`;
 
   try {
     const res = await fetch(url, { method: "POST" });

@@ -1,8 +1,15 @@
+import type { GetServerSideProps } from "next";
 import Head from "next/head";
 
 import { Navigation, StoresFinder } from "@/components/";
+import { Store } from "@/types";
+import { fetchStores } from "@/utils";
 
-export default function Stores() {
+type Props = {
+  stores: Store[];
+};
+
+export default function Stores({ stores }: Props) {
   return (
     <>
       <Head>
@@ -22,8 +29,19 @@ export default function Stores() {
         <Navigation />
       </header>
       <main className="h-[calc(100vh-10.5rem)] md:h-[calc(100vh-6.8rem)]">
-        <StoresFinder />
+        <StoresFinder stores={stores} />
       </main>
     </>
   );
 }
+
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  const stores: Store[] = await fetchStores({ lat: "50.850346", long: "4.351721" });
+
+  return {
+    props: {
+      stores,
+    },
+    // revalidate: 10,
+  };
+};
