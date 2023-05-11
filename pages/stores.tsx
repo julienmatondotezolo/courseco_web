@@ -28,7 +28,7 @@ export default function Stores({ stores }: Props) {
       <header className="flex flex-wrap mx-auto w-11/12 md:max-w-screen-xl">
         <Navigation />
       </header>
-      <main className="h-[calc(100vh-10.5rem)] md:h-[calc(100vh-6.8rem)]">
+      <main className="md:h-[calc(100vh-6.8rem)]">
         <StoresFinder stores={stores} />
       </main>
     </>
