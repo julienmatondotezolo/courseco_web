@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React from "react";
 
-import { imagesConfig } from "@/config";
 import { Store } from "@/types";
 
 type Props = {
@@ -19,7 +18,7 @@ export function StoreList({ stores }: Props) {
                 <figure className="flex items-center w-4 md:w-8 mr-4">
                   <Image
                     className="object-contain"
-                    src={imagesConfig.root.url + "images/" + store.properties.logoStore}
+                    src={store.properties.logoStore}
                     alt="Hero image"
                     width={100}
                     height={100}
