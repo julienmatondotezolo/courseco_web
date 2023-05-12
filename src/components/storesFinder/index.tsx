@@ -12,7 +12,7 @@ type Props = {
 export function StoresFinder({ stores }: Props) {
   return (
     <div className="relative w-full h-full bg-orange-opaque">
-      <div className="absolute hidden md:block top-0 right-0 w-2/3 h-full">
+      <div className="absolute hidden md:block top-0 right-0 w-2/3 h-full overflow-hidden">
         <StoreMap stores={stores} />
       </div>
       <div className="absolute w-full contents md:block">
