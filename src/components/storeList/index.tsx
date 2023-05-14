@@ -10,7 +10,7 @@ type Props = {
 
 export function StoreList({ stores }: Props) {
   return (
-    <div className="bg-white top-1/2 w-full md:w-1/2 rounded-xl overflow-hidden">
+    <div className="bg-white w-full rounded-xl overflow-hidden">
       <div className="flex justify-between w-full p-4 bg-light-grey">
         <input
           className="searchInput md:w-80 flex-grow"
@@ -47,7 +47,7 @@ export function StoreList({ stores }: Props) {
               </article>
               <div className="flex flex-wrap flex-row items-center w-8/12 md:w-fit">
                 <button className="roundedButton bg-green-notification mr-2">Ouvert</button>
-                <p className="text-green-notification text-sm">jusqu'à 22:00</p>
+                <p className="text-green-notification text-sm">jusqu&apos;à 22:00</p>
               </div>
               <article>
                 <p className="font-medium">Distance</p>
