@@ -1,6 +1,5 @@
 import type { GetServerSideProps } from "next";
 import Head from "next/head";
-import { useState } from "react";
 
 import { Navigation, StoresFinder, TopNav } from "@/components/";
 import { Store } from "@/types";
@@ -11,8 +10,6 @@ type Props = {
 };
 
 export default function Stores({ stores }: Props) {
-  const [position, setPosition] = useState({ lat: "50.850346", long: "4.351721" });
-
   return (
     <>
       <Head>

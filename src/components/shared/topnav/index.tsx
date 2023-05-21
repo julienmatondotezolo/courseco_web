@@ -1,7 +1,27 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export function TopNav() {
+  const [location, setLocation] = useState({});
+
+  useEffect(() => {
+    if ("geolocation" in navigator) {
+      // Retrieve latitude & longitude coordinates from `navigator.geolocation` Web API
+      navigator.geolocation.getCurrentPosition(({ coords }) => {
+        const { latitude, longitude } = coords;
+
+        setLocation({ latitude, longitude });
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    // Fetch data from API if `location` object is set
+    if (location) {
+      console.log("location", location);
+    }
+  }, [location]);
+
   return (
     <aside className="flex flex-wrap w-full py-2 bg-blue-opaque">
       <div className="flex flex-wrap justify-between mx-auto w-11/12 md:max-w-screen-xl">

@@ -1,10 +1,15 @@
 import React, { useState } from "react";
-import Map from "react-map-gl";
+import Map, { Layer, Source } from "react-map-gl";
 
 import { Store } from "@/types";
 
 type Props = {
   stores: Store[];
+};
+
+const layerStyle = {
+  id: "string",
+  type: "string",
 };
 
 export function StoreMap({ stores }: Props) {
@@ -20,7 +25,14 @@ export function StoreMap({ stores }: Props) {
     <Map
       {...viewport}
       mapboxAccessToken={process.env.NEXT_PUBLIC_REACT_APP_MAPBOX_ACCESS_TOKEN}
+      onMove={(nextViewPort) => setViewPort(nextViewPort)}
       mapStyle="mapbox://styles/julienmt/clhkkbjcq01nk01pg9m593nk6"
-    ></Map>
+    >
+      {stores.map((store) => (
+        <Source key={store.properties.placeId} id="my-data" type="geojson" data={store}>
+          <Layer {...layerStyle} />
+        </Source>
+      ))}
+    </Map>
   );
 }

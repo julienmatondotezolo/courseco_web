@@ -11,7 +11,10 @@ export interface Product {
 }
 
 export interface Store {
-  coordinates: [number, number];
+  geometry: {
+    type: string;
+    coordinates: [number, number];
+  };
   type: string;
   properties: {
     address: {
