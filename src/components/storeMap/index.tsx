@@ -7,11 +7,6 @@ type Props = {
   stores: Store[];
 };
 
-const layerStyle = {
-  id: "string",
-  type: "string",
-};
-
 export function StoreMap({ stores }: Props) {
   const [viewport, setViewPort] = useState({
     with: "100%",
@@ -21,6 +16,8 @@ export function StoreMap({ stores }: Props) {
     zoom: 14,
   });
 
+  stores.map((store) => console.log("store:", store));
+
   return (
     <Map
       {...viewport}
@@ -28,11 +25,11 @@ export function StoreMap({ stores }: Props) {
       onMove={(nextViewPort) => setViewPort(nextViewPort)}
       mapStyle="mapbox://styles/julienmt/clhkkbjcq01nk01pg9m593nk6"
     >
-      {stores.map((store) => (
+      {/* {stores.map((store) => (
         <Source key={store.properties.placeId} id="my-data" type="geojson" data={store}>
-          <Layer {...layerStyle} />
+          <Layer />
         </Source>
-      ))}
+      ))} */}
     </Map>
   );
 }
