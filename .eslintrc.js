@@ -23,6 +23,13 @@ module.exports = {
   rules: {
     "prettier/prettier": ["error", {}, { usePrettierrc: true }],
     "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      {
+        additionalHooks: "useRecoilCallback",
+      },
+    ],
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "import/first": "error",
