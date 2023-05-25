@@ -15,7 +15,7 @@ export function StoresFinder({ stores }: Props) {
       <div className="absolute hidden md:block top-0 right-0 w-2/3 h-full overflow-hidden">
         <StoreMap stores={stores} />
       </div>
-      <div className="absolute w-full md:w-auto contents md:block">
+      <div className="absolute md:left-[4%] w-full md:w-auto contents md:block">
         <section className="flex flex-col mx-auto w-11/12 md:max-w-screen-xl">
           <h1 className="sm:w-full py-8 text-2xl md:text-5xl font-medium">
             Tous les magasins

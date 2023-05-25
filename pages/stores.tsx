@@ -6,10 +6,10 @@ import { Store } from "@/types";
 import { fetchStores } from "@/utils";
 
 type Props = {
-  stores: Store[];
+  storesData: Store[];
 };
 
-export default function Stores({ stores }: Props) {
+export default function Stores({ storesData }: Props) {
   return (
     <>
       <Head>
@@ -22,18 +22,18 @@ export default function Stores({ stores }: Props) {
         <Navigation />
       </header>
       <main className="md:h-[calc(100vh-6.8rem)]">
-        <StoresFinder stores={stores} />
+        <StoresFinder stores={storesData} />
       </main>
     </>
   );
 }
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const stores: Store[] = await fetchStores({ lat: "50.850346", long: "4.351721" });
+  const storesData: Store[] = await fetchStores({ lat: "50.850346", long: "4.351721" });
 
   return {
     props: {
-      stores,
+      storesData,
     },
     // revalidate: 10,
   };
